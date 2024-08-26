@@ -1,7 +1,8 @@
-class Game {
-
+import { mrPotatoHeadQuotes } from '/assets/js/quotes/mrPotatoHead.js';
+import mrsPotatoHeadQuotes from '/assets/js/quotes/mrsPotatoHead.js';
+import { getIndex } from '/assets/js/utilities.js';
+export default class Game {
   start() {
-
     document.getElementById('hello').addEventListener('click', () => {
       const index = getIndex();
       const messageContainer = document.getElementById('message');
@@ -28,13 +29,13 @@ class Game {
       const messageContainer = document.getElementById('message');
       const wrapper = document.getElementById('wrapper');
       if (index === 1) {
-        image.src = "./assets/images/potatohead2.png";
-        wrapper.dataset.index = "2";
+        image.src = './assets/images/potatohead2.png';
+        wrapper.dataset.index = '2';
       } else {
-        image.src = "./assets/images/potatohead1.png";
-        wrapper.dataset.index = "1";
+        image.src = './assets/images/potatohead1.png';
+        wrapper.dataset.index = '1';
       }
-      messageContainer.innerText = "";
-    })
+      messageContainer.innerText = '';
+    });
   }
 }
